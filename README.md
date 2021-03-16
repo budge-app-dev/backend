@@ -1,4 +1,4 @@
-# backend
+# Backend for Budge
 Base URL: 
 ### All Endpoints
 | Request | URL | Body |

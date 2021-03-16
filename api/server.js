@@ -16,4 +16,8 @@ server.use('/api/users', userRouter)
 server.use('/api/categories', categoryRouter)
 server.use('/api/budget', budgetRouter)
 
+server.get('/', (req, res)=> {
+    res.status(200).json({message: "Hello, from Budge API :)"})
+})
+
 module.exports = server

@@ -3,6 +3,16 @@ const Category = require('./category-model')
 
 const router = express.Router()
 
+
+router.get('/', (req, res) => {
+    Category.find()
+    .then(categories => {
+        res.status(200).json(categories)
+    })
+    .catch(error => {
+        res.status(500).json({message: error.message})
+    })
+})
 router.get('/:user_id/categories', (req, res) => {
     Category.find()
         .then(data => {
